@@ -26,7 +26,6 @@ p {font-size:14px;font-style:normal;font-weight:bold;color:000000;background-col
 </style>
 </head>
 <body>
-<center><h3>PMS All In One Installer</h3></center>
 <p>This little infection scanner was purely designed to show how easy it is to create/install<br> 
 plugins within cPanel.  It is in no way a comprehensive scanner and should not be solely relied<br>
 upon.  This program will NOT remove nor quarantine anything.  All detections should be<br>
@@ -46,7 +45,7 @@ on your website or any other websites.
 END
 
 print "Now Installing PMS TO: $USERPATH <P>\n";
-my @REPOFOLDER = qx[ mkdir $USERPATH/repositories/allinone-v2  ];
+my @REPOFOLDER = qx[ mkdir repositories/allinone-v2 ];
 #require '/usr/local/cpanel/base/frontend/paper_lantern/infection_scanner/infections.txt';
 # my $URL="https://raw.githubusercontent.com/cPanelPeter/infection_scanner/master/strings.txt";
 # my @DEFINITIONS = qx[ curl -s $URL ];
@@ -84,9 +83,9 @@ my @REPOFOLDER = qx[ mkdir $USERPATH/repositories/allinone-v2  ];
 # }
 
 print <<END;
-<p>
-Please note that these are "possible" infections and could very well be false positives. Each file should be carefully examined for security issues. YOU SHOULD NOT BLINDLY DELETE A FILE!
-<p>
+# <p>
+# Please note that these are "possible" infections and could very well be false positives. Each file should be carefully examined for security issues. YOU SHOULD NOT BLINDLY DELETE A FILE!
+# <p>
 <a href="../index.html">Home</a>
 END
 
