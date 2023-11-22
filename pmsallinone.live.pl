@@ -53,6 +53,10 @@ use File::Path qw(make_path);
 make_path("$USERPATH/repositories");
 make_path("$USERPATH/repositories/allinone-v2");
 
+my $output = qx'echo $SHELL' ;
+
+print $output ;
+
 # my $output = `ls -l`;
 # print "------display the captured output with backticks------ \n";
 # print $output;
