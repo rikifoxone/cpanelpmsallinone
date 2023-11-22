@@ -15,17 +15,17 @@ print $cpanel->header( "PMS All In One Installer!" );
 //get username
 $accountName = Account::name($cpanel);
 
-echo $accountName;
+//echo $accountName;
 exec("cd /home/" . $accountName. "/repositories && pwd",$output);
 print_r($output);
 
-exec("https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git", $output);
+exec("git clone https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git", $output);
 print_r($output);
 //add username to file path
 // $file = file("/home/$accountName/.lastlogin");
 ?>
 
-<table id="table" class="styled-table">
+<!-- <table id="table" class="styled-table">
 <thead>
 <tr>
     <th>IP Address</th>
@@ -34,7 +34,7 @@ print_r($output);
 <th>Time</th>
     <th></th>
   </tr>
-</thead>
+</thead> -->
 <?php
 // $file = fopen("/home/$accountName/.lastlogin", "r") or die("Unable to open file!");
 // //output the content of .lastlogin file
