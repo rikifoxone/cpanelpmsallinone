@@ -61,10 +61,10 @@ print "Clone Repo: \n";
 my $repourl = "https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56\@bitbucket.org/xmltech/allinone-v2.git";
 print "$repourl<br>\n";
 # @output = qx(git clone );
-# @output = qx(git clone $repourl);
+@output = qx(git clone $repourl);
 #@output = qx(git);
-my $dir = "$USERPATH/repositories/"
-print "$dir<br>\n";
+# my $dir = "$USERPATH/repositories/"
+# print "$dir<br>\n";
 # Git::Repository->run( clone => $repourl  => $dir );
 print "@output\n";
 
