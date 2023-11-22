@@ -10,7 +10,7 @@ echo "Installing PMS"
 mkdir -p /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 
 # Get the plugin files from Github
-curl -s https://github.com/rikifoxone/cpanelpmsallinone/blob/main/is_files.tar.gz > /root/is_files.tar.gz
+curl -s https://github.com/rikifoxone/cpanelpmsallinone/blob/main/is_files.tar.gz > is_files.tar.gz
 
 # Uncompress the archive
 tar xzf is_files.tar.gz

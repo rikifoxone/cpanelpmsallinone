@@ -17,17 +17,16 @@ print <<END;
 <!DOCTYPE html>
 <html>
 <head>
-<title>
-Simple Website Infection Scanner</title>
+<title>PMS All In One Installer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
 body {background-color:ffffff;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
-h3{font-family:Cursive;color:FFFFCC;background-color:3333CC;}
-p {font-family:Cursive;font-size:14px;font-style:normal;font-weight:bold;color:000000;background-color:FFFFCC;}
+h3 {color:FFFFCC;background-color:3333CC;}
+p {font-size:14px;font-style:normal;font-weight:bold;color:000000;background-color:FFFFCC;}
 </style>
 </head>
 <body>
-<center><h3>Simple Infection Scanner</h3></center>
+<center><h3>PMS All In One Installer</h3></center>
 <p>This little infection scanner was purely designed to show how easy it is to create/install<br> 
 plugins within cPanel.  It is in no way a comprehensive scanner and should not be solely relied<br>
 upon.  This program will NOT remove nor quarantine anything.  All detections should be<br>
@@ -46,42 +45,43 @@ on your website or any other websites.
 <hr>
 END
 
-print "Now scanning $USERPATH...<P>\n";
+print "Now Installing PMS TO: $USERPATH <P>\n";
+my @REPOFOLDER = qx[ mkdir $USERPATH/repositories/allinone-v2  ];
 #require '/usr/local/cpanel/base/frontend/paper_lantern/infection_scanner/infections.txt';
-my $URL="https://raw.githubusercontent.com/cPanelPeter/infection_scanner/master/strings.txt";
-my @DEFINITIONS = qx[ curl -s $URL ];
-my $StringCnt = @DEFINITIONS;
-my @SEARCHSTRING=sort(@DEFINITIONS);
-my @FOUND=undef;
-my $SOMETHING_FOUND=0;
-my $SEARCHSTRING;
-my $cntFound=0;
-foreach $SEARCHSTRING(@SEARCHSTRING) {
-   chomp($SEARCHSTRING);
-   print ".\n";
-   my $SCAN=qx[ grep -rIl --exclude-dir=www --exclude-dir=mail --exclude-dir=tmp -w "$SEARCHSTRING" $USERPATH/* ];
-   chomp($SCAN);
-   if($SCAN) {
-      $cntFound++;
-      $SOMETHING_FOUND=1;
-      push(@FOUND,"<font color=GREEN>The phrase</font> <font color=RED>$SEARCHSTRING</font> <font color=GREEN>was found in file</font> <font color=BLUE>$SCAN</font>");
-   }
-# UNCOMMENT THIS NEXT LINE TO PUT A .10 SECOND PAUSE (for drammatic effect).
-#       select(undef, undef, undef, 0.10);
-}
-if ($SOMETHING_FOUND > 0) {
-   my $found;
-   my $FoundCnt = @FOUND;
-   print "<p>Results: $FountCnt possible infections found.<p>\n";
-   foreach $found(@FOUND) {
-      chomp($found);
-      $found =~ s/\\//g;
-      print "$found<br>\n";
-   }
-}
-else { 
-	print "<p>Congratulations!  Nothing suspicious was found!\n";
-}
+# my $URL="https://raw.githubusercontent.com/cPanelPeter/infection_scanner/master/strings.txt";
+# my @DEFINITIONS = qx[ curl -s $URL ];
+# my $StringCnt = @DEFINITIONS;
+# my @SEARCHSTRING=sort(@DEFINITIONS);
+# my @FOUND=undef;
+# my $SOMETHING_FOUND=0;
+# my $SEARCHSTRING;
+# my $cntFound=0;
+# foreach $SEARCHSTRING(@SEARCHSTRING) {
+#    chomp($SEARCHSTRING);
+#    print ".\n";
+#    my $SCAN=qx[ grep -rIl --exclude-dir=www --exclude-dir=mail --exclude-dir=tmp -w "$SEARCHSTRING" $USERPATH/* ];
+#    chomp($SCAN);
+#    if($SCAN) {
+#       $cntFound++;
+#       $SOMETHING_FOUND=1;
+#       push(@FOUND,"<font color=GREEN>The phrase</font> <font color=RED>$SEARCHSTRING</font> <font color=GREEN>was found in file</font> <font color=BLUE>$SCAN</font>");
+#    }
+# # UNCOMMENT THIS NEXT LINE TO PUT A .10 SECOND PAUSE (for drammatic effect).
+# #       select(undef, undef, undef, 0.10);
+# }
+# if ($SOMETHING_FOUND > 0) {
+#    my $found;
+#    my $FoundCnt = @FOUND;
+#    print "<p>Results: $FountCnt possible infections found.<p>\n";
+#    foreach $found(@FOUND) {
+#       chomp($found);
+#       $found =~ s/\\//g;
+#       print "$found<br>\n";
+#    }
+# }
+# else { 
+# 	print "<p>Congratulations!  Nothing suspicious was found!\n";
+# }
 
 print <<END;
 <p>
