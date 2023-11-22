@@ -16,8 +16,8 @@ mkdir -p /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 # tar xzf is_files.tar.gz
 
 # Move files to /usr/local/cpanel/base/frontend/paper_lantern/infection_scanner directory
-mv /root/cpanelpmsallinone/pmsallinone.live.pl /usr/local/cpanel/base/frontend/jupiter/pmsallinone
-mv /root/cpanelpmsallinone/pmsallinone.tar.gz /usr/local/cpanel/base/frontend/jupiter/pmsallinone
+cp /root/cpanelpmsallinone/pmsallinone.live.pl /usr/local/cpanel/base/frontend/jupiter/pmsallinone
+cp /root/cpanelpmsallinone/pmsallinone.tar.gz /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 
 # Install the plugin (which also places the png image in the proper location)
 /usr/local/cpanel/scripts/install_plugin /usr/local/cpanel/base/frontend/jupiter/pmsallinone/pmsallinone.tar.gz
