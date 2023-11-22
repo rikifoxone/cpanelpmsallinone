@@ -13,7 +13,7 @@ mkdir -p /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 # curl -s https://github.com/rikifoxone/cpanelpmsallinone/blob/main/is_files.tar.gz > is_files.tar.gz
 
 # Uncompress the archive
-tar xzf is_files.tar.gz
+# tar xzf is_files.tar.gz
 
 # Move files to /usr/local/cpanel/base/frontend/paper_lantern/infection_scanner directory
 mv /root/cpanelpmsallinone/pmsallinone.live.pl /usr/local/cpanel/base/frontend/jupiter/pmsallinone
