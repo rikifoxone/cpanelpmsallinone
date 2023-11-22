@@ -11,12 +11,17 @@ class Account
 
 $cpanel = new CPANEL();
 //plugin name on top of page
-print $cpanel->header( "Login Log" );
+print $cpanel->header( "PMS All In One Installer!" );
 //get username
 $accountName = Account::name($cpanel);
+
+shell_exec("cd " . $accountName. '/repositories');
+
+shell_exec("https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git");
 //add username to file path
-$file = file("/home/$accountName/.lastlogin");
+// $file = file("/home/$accountName/.lastlogin");
 ?>
+
 <table id="table" class="styled-table">
 <thead>
 <tr>
@@ -28,14 +33,14 @@ $file = file("/home/$accountName/.lastlogin");
   </tr>
 </thead>
 <?php
-$file = fopen("/home/$accountName/.lastlogin", "r") or die("Unable to open file!");
-//output the content of .lastlogin file
-while (!feof($file)){
-    $data = fgets($file);
-    echo "<tr><td>" . str_replace(' ','</td><td>',$data) . '</td></tr>';
-}
-echo '</table>';
-fclose($file);
+// $file = fopen("/home/$accountName/.lastlogin", "r") or die("Unable to open file!");
+// //output the content of .lastlogin file
+// while (!feof($file)){
+//     $data = fgets($file);
+//     echo "<tr><td>" . str_replace(' ','</td><td>',$data) . '</td></tr>';
+// }
+// echo '</table>';
+// fclose($file);
 ?>
 <?php
     //add capenl footer
