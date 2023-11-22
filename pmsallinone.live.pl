@@ -52,7 +52,9 @@ make_path("$USERPATH/repositories/allinone-v2");
 
 
 
-@output = qx(du -s /tmp);
+# @output = qx(du -s /tmp);
+@output = qx(cd $USERPATH/repositories/allinone-v2 && pwd);
+
 print "@output\n";
 # my $output = `ls -l`;
 # print "------display the captured output with backticks------ \n";
