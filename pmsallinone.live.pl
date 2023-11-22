@@ -5,8 +5,6 @@ BEGIN {
 }
 
 use Cpanel::LiveAPI ();
-use warnings;
-use Shell;
 my $cpanel = Cpanel::LiveAPI->new();
 
 # Turn off buffering
@@ -52,10 +50,6 @@ print "Now Installing PMS TO: $USERPATH <P>\n";
 use File::Path qw(make_path);
 make_path("$USERPATH/repositories");
 make_path("$USERPATH/repositories/allinone-v2");
-
-my $output = qx'echo $SHELL' ;
-
-print $output ;
 
 # my $output = `ls -l`;
 # print "------display the captured output with backticks------ \n";
