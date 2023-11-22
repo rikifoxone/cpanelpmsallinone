@@ -15,7 +15,7 @@ mkdir -p /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 # Uncompress the archive
 # tar xzf is_files.tar.gz
 
-# Move files to /usr/local/cpanel/base/frontend/paper_lantern/infection_scanner directory
+# Copy files to /usr/local/cpanel/base/frontend/jupiter/infection_scanner directory
 cp /root/cpanelpmsallinone/pmsallinone.live.pl /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 cp /root/cpanelpmsallinone/pmsallinone.tar.gz /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 
