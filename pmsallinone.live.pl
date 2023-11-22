@@ -58,7 +58,8 @@ print "Change Directory:\n";
 print "@output\n";
 
 print "Clone Repo:\n";
-@output = qx(git clone https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56\@bitbucket.org/xmltech/allinone-v2.git);
+# @output = qx(git clone https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56\@bitbucket.org/xmltech/allinone-v2.git);
+@output = qx(git clone);
 #@output = qx(git);
 print "@output\n";
 
