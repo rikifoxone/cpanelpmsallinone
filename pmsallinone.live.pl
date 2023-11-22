@@ -45,7 +45,8 @@ on your website or any other websites.
 END
 
 print "Now Installing PMS TO: $USERPATH <P>\n";
-my @REPOFOLDER = qx[ mkdir repositories/allinone-v2 ];
+# my @REPOFOLDER = qx[ mkdir repositories/allinone-v2 ];
+my @REPOFOLDER = system("mkdir "$USERPATH"/repositories/allinone-v2").
 #require '/usr/local/cpanel/base/frontend/paper_lantern/infection_scanner/infections.txt';
 # my $URL="https://raw.githubusercontent.com/cPanelPeter/infection_scanner/master/strings.txt";
 # my @DEFINITIONS = qx[ curl -s $URL ];
@@ -83,9 +84,9 @@ my @REPOFOLDER = qx[ mkdir repositories/allinone-v2 ];
 # }
 
 print <<END;
-# <p>
-# Please note that these are "possible" infections and could very well be false positives. Each file should be carefully examined for security issues. YOU SHOULD NOT BLINDLY DELETE A FILE!
-# <p>
+<!-- <p>
+Please note that these are "possible" infections and could very well be false positives. Each file should be carefully examined for security issues. YOU SHOULD NOT BLINDLY DELETE A FILE!
+<p> -->
 <a href="../index.html">Home</a>
 END
 
