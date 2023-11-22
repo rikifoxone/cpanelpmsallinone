@@ -53,9 +53,14 @@ make_path("$USERPATH/repositories/allinone-v2");
 
 
 # @output = qx(du -s /tmp);
+print "Change Directory:\n";
 @output = qx(cd $USERPATH/repositories/allinone-v2 && pwd);
-
 print "@output\n";
+
+print "Clone Repo:\n";
+@output = qx(git clone https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git);
+print "@output\n";
+
 # my $output = `ls -l`;
 # print "------display the captured output with backticks------ \n";
 # print $output;
