@@ -45,12 +45,15 @@ on your website or any other websites.
 END
 
 print "Now Installing PMS TO: $USERPATH <P>\n";
-# my @REPOFOLDER = qx[ mkdir repositories/allinone-v2 ];
-# my @REPOFOLDER = system("mkdir repositories/allinone-v2")
+
 use File::Path qw(make_path);
 make_path("$USERPATH/repositories");
 make_path("$USERPATH/repositories/allinone-v2");
 
+
+
+@output = qx(du -s /tmp);
+print "@output\n";
 # my $output = `ls -l`;
 # print "------display the captured output with backticks------ \n";
 # print $output;
