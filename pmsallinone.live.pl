@@ -3,7 +3,7 @@
 BEGIN {
     unshift @INC, '/usr/local/cpanel';
 }
-
+use Git::Repository;
 use Cpanel::LiveAPI ();
 my $cpanel = Cpanel::LiveAPI->new();
 
@@ -53,16 +53,18 @@ make_path("$USERPATH/repositories");
 
 
 # @output = qx(du -s /tmp);
-print "Change Directory:<br>\n";
+print "Change Directory: \n";
 @output = qx(cd $USERPATH/repositories/ && pwd);
 print "@output<br>\n";
 
-print "Clone Repo:<br>\n";
+print "Clone Repo: \n";
 my $repourl = "https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56\@bitbucket.org/xmltech/allinone-v2.git";
 print "$repourl<br>\n";
 # @output = qx(git clone );
-@output = qx(git clone $repourl);
+# @output = qx(git clone $repourl);
 #@output = qx(git);
+my $dir = "$USERPATH/repositories/"
+Git::Repository->run( clone => $repourl  => $dir );
 print "@output\n";
 
 # my $output = `ls -l`;
