@@ -16,11 +16,11 @@ print $cpanel->header( "PMS All In One Installer!" );
 $accountName = Account::name($cpanel);
 
 echo $accountName;
-exec("cd " . $accountName. "/repositories && pwd",$output);
-echo $output;
+exec("cd /home/" . $accountName. "/repositories && pwd",$output);
+print_r($output);
 
 exec("https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git", $output);
-echo $output;
+print_r($output);
 //add username to file path
 // $file = file("/home/$accountName/.lastlogin");
 ?>
