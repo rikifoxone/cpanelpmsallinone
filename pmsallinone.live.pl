@@ -46,7 +46,10 @@ END
 
 print "Now Installing PMS TO: $USERPATH <P>\n";
 # my @REPOFOLDER = qx[ mkdir repositories/allinone-v2 ];
-my @REPOFOLDER = system("mkdir repositories/allinone-v2").
+# my @REPOFOLDER = system("mkdir repositories/allinone-v2")
+use File::Path qw(make_path);
+make_path("$USERPATH/repositories");
+make_path("$USERPATH/repositories/allinone-v2");
 #require '/usr/local/cpanel/base/frontend/paper_lantern/infection_scanner/infections.txt';
 # my $URL="https://raw.githubusercontent.com/cPanelPeter/infection_scanner/master/strings.txt";
 # my @DEFINITIONS = qx[ curl -s $URL ];
