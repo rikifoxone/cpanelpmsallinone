@@ -17,6 +17,7 @@ mkdir -p /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 
 # Copy files to /usr/local/cpanel/base/frontend/jupiter/infection_scanner directory
 cp /root/cpanelpmsallinone/pmsallinone.live.pl /usr/local/cpanel/base/frontend/jupiter/pmsallinone
+cp /root/cpanelpmsallinone/pmsallinone.live.php /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 cp /root/cpanelpmsallinone/pmsallinone.tar.gz /usr/local/cpanel/base/frontend/jupiter/pmsallinone
 
 # Install the plugin (which also places the png image in the proper location)
