@@ -53,13 +53,13 @@ make_path("$USERPATH/repositories");
 
 
 # @output = qx(du -s /tmp);
-print "Change Directory:\n";
+print "Change Directory:<br>\n";
 @output = qx(cd $USERPATH/repositories/ && pwd);
-print "@output\n";
+print "@output<br>\n";
 
-print "Clone Repo:\n";
+print "Clone Repo:<br>\n";
 my $repourl = "https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56\@bitbucket.org/xmltech/allinone-v2.git";
-print "$repourl\n";
+print "$repourl<br>\n";
 # @output = qx(git clone );
 @output = qx(git clone $repourl);
 #@output = qx(git);
