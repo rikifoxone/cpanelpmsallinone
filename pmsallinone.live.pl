@@ -64,7 +64,8 @@ print "$repourl<br>\n";
 # @output = qx(git clone $repourl);
 #@output = qx(git);
 my $dir = "$USERPATH/repositories/"
-Git::Repository->run( clone => $repourl  => $dir );
+print "$dir<br>\n";
+# Git::Repository->run( clone => $repourl  => $dir );
 print "@output\n";
 
 # my $output = `ls -l`;
