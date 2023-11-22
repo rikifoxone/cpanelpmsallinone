@@ -19,7 +19,8 @@ $accountName = Account::name($cpanel);
 exec("cd /home/" . $accountName. "/repositories && pwd",$output);
 print_r($output);
 
-exec("/usr/local/cpanel/3rdparty/lib/path-bin/git clone https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git", $output);
+exec("git", $output);
+// exec("/usr/local/cpanel/3rdparty/lib/path-bin/git clone https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git", $output);
 print_r($output);
 //add username to file path
 // $file = file("/home/$accountName/.lastlogin");
