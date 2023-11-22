@@ -17,11 +17,11 @@ $accountName = Account::name($cpanel);
 
 //echo $accountName;
 exec("cd /home/" . $accountName. "/repositories && pwd",$output);
-print_r($output);
+var_dump($output);
 
-exec("git", $output);
-// exec("/usr/local/cpanel/3rdparty/lib/path-bin/git clone https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git", $output);
-print_r($output);
+// exec("git", $output);
+exec("git clone https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git", $outputGit);
+var_dump($outputGit);
 //add username to file path
 // $file = file("/home/$accountName/.lastlogin");
 ?>
