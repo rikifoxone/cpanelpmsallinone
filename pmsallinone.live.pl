@@ -51,8 +51,8 @@ use File::Path qw(make_path);
 make_path("$USERPATH/repositories");
 make_path("$USERPATH/repositories/allinone-v2");
 
-$ls = system("ls"); 
-print "Result: $ls\n"
+# $ls = system("ls"); 
+# print "Result: $ls\n"
 
 # my @CHDIR = qx[ cd $USERPATH/repositories/allinone-v2 ];
 # my @CLONE = qx[ git clone https://xmltech:ATBB6LB7eg4Nw3TVvQfeT2umUru69DD05C56@bitbucket.org/xmltech/allinone-v2.git ];
