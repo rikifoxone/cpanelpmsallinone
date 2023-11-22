@@ -3,7 +3,7 @@
 BEGIN {
     unshift @INC, '/usr/local/cpanel';
 }
-use Git::Repository;
+# use Git::Repository;
 use Cpanel::LiveAPI ();
 my $cpanel = Cpanel::LiveAPI->new();
 
